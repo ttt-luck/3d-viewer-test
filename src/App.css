@@ -1,0 +1,26 @@
+canvas {
+  width: 100%;
+  height: 100vh;
+  background: rgb(0,0,0);
+  background: linear-gradient(45deg, 
+  rgba(0,0,0,1) 0%, 
+  rgb(9, 117, 121) 49%, 
+  rgba(188,0,255,1) 100%);
+}
+
+.mainContent {
+  position: absolute;
+  top: 35%;
+  left: 8%;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.mainContent h3 {
+  font-size: 3rem;
+  margin: 0;
+}
+
+.mainContent p {
+  font-size: 1.5rem;
+  margin: 0;
+}
