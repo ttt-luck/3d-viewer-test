@@ -85,7 +85,7 @@ function App() {
     <canvas id='canvas'></canvas>
       <div className='mainContent'>
           <p>JUNKET BANK</p>
-          <h3>Reimei Kano</h3>
+          <h3>Reimei Kanou</h3>
       </div>;
     </>
   )
