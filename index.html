@@ -1,22 +1,50 @@
-<!-- 360°閲覧できるビューワーのように、WEBサイトに3Dを埋め込む例 -->
-<html>
-  <head>
-    <!-- A-FrameをCDNから読み込む -->
-    <script src="https://aframe.io/releases/1.0.3/aframe.min.js"></script>
-    <!-- aframe-orbit-controlsをCDNから読み込む -->
-    <script src="https://unpkg.com/aframe-orbit-controls@1.2.0/dist/aframe-orbit-controls.min.js"></script>
-  </head>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- A-FrameをCDNから読込む　-->
+    <script src="https://aframe.io/releases/1.6.0/aframe.min.js"></script>
+    <!-- アニメーションミキサー　-->
+    <script src="https://cdn.jsdelivr.net/npm/aframe-extras@7.0.0/dist/aframe-extras.min.js"></script>
+    <!-- オービットコントローラー -->
+    <script src="https://cdn.jsdelivr.net/npm/aframe-orbit-controls@1.3.2/dist/aframe-orbit-controls.min.js"></script>
+    
+    
+</head>
 <body>
     <a-scene>
-    <!-- aframe-orbit-controlsのプロパティを記述 -->
-    <a-entity camera look-controls orbit-controls="target: 0 1.6 -0.5; maxPolarAngle:180; minDistance: 0.5; maxDistance: 200; initialPosition: 0 0 30"></a-entity>
+        <!-- aframe-orbit-controlsのプロパティを記述 -->
+        <a-entity camera look-controls="enabled: false"
+        orbit-controls=
+        "target: 0 25 0; 
+        maxPolarAngle:90; 
+        minDistance: 2; 
+        maxDistance: 1000; 
+        initialPosition: 0 20 20; 
+        enableZoom: true;
+        maxAzimuthAngle: 90;
+        zoomSpeed: 2;
+        rotateSpeed: 1.5">
+        </a-entity>
+        
+        <a-assets>
+            <!-- 3Dモデルの読み込み -->
+            <a-gltf-model id="humanModel" src="reimei02_greeting.glb">
+            </a-gltf-model>
+        </a-assets>
 
-    <!-- 3Dモデルを読み込んで、位置やスケールなど定義する -->
-    <a-gltf-model  id="test" src="reimei02_walking.glb"  position="0 -15 0" rotation="0 0 0" scale="15 15 15"></a-gltf-model>
+        
 
-    <!-- 背景色-->
-    <a-sky color="#9EA1E7"></a-sky>
 
+        <!--アニメーションを使用する-->
+        <a-entity gltf-model="#humanModel" position="0 0 0" scale="15 15 15" animation-mixer="loop: once; clampWhenFinished: true"></a-entity>
+        
+        <!--オービットコントローラー
+        <a-entity camera look-controls="enabled: false" orbit-controls="target: 0 2 0; minDistance: 1.5; maxDistance: 10; initialPosition: 0 0 0; rotateSpeed: 0.5"></a-entity>-->
+        
+    </a-scene>
     </a-scene>
 </body>
 </html>
