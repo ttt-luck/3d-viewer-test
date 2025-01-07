@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+html { scroll-behavior: smooth;}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(rgb(210, 210, 210), rgb(128, 114, 139));
+    font-family: "Poppins", sans-serif;
+}
+
+/* ヘッダー */
+.header {
+    padding: 20px;
+    font-size: 24px;
+    background-color: rgba(0, 0, 0, 0.356);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    z-index: 30;
+}
+
+.headerTitle h1 {
+    color: white;
+    margin: 0px;
+}
+
+.headerTitle p {
+    color: white;
+    margin: 0px;
+}
+
+.header nav ul li {
+    list-style: none;
+    display: inline-block;
+    margin-right: 30px;
+}
+
+.header nav ul li a {
+    text-decoration: none;
+    color: white;
+    transition: all 0.5s;
+}
+
+
+.header nav ul li a:hover {
+    color: rgb(240, 243, 86);
+}
+
+/* main全体*/
+.main {
+    padding-top: 150px;
+    width: 100%;
+}
+
+/* top画像 */
+.title {
+    padding-top: 200px;
+    padding-bottom: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: rgb(124, 110, 71);
+}
+
+/* section全体 */
+section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(51, 43, 43);
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: "Noto Sans JP", sans-serif;
+}
+
+/* sec-01 ABOUTのリンク先　*/
+section {
+    margin-top: 150px;
+    margin-bottom: 0px;
+}
+
+.sec-title {
+    font-size: 2rem;
+    margin-bottom: 50px;
+}
+
+.content {
+    width: 1050px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 100px;
+}
+
+.content .image {
+    position: relative;
+    width: 800px;
+    height: 600px;
+    overflow: hidden;
+}
+
+.content .image img {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+    z-index: 10;
+}
+
+.content .text-box {
+    font-size: 18px;
+    z-index: 20;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 40px;
+    max-width: 400px;
+    transform: translate(60px, -60px);
+    backdrop-filter: blur(10px);
+    border-radius: 5px;
+    border-radius: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.content .text-box h3 {
+    padding-bottom: 1em;
+}
+
+/* sec-02 WORKのリンク先　*/
+
+.sec-02 .text-box {
+    max-width: 400px;
+    transform: translate(-20px, 50px);
+}
+
+.content-wide {
+    width: 1050px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0px;
+}
+
+.content-wide .image-wide {
+    position: relative;
+    width: 1050px;
+    height: 600px;
+    overflow: hidden;
+}
+
+.content-wide .image-wide img {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+    z-index: 10;
+}
+
+.content-wide .text-box-bottom {
+    font-size: 18px;
+    z-index: 20;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 40px;
+    max-width: 950px;
+    transform: translate(45px, -20px);
+    backdrop-filter: blur(10px);
+    border-radius: 5px;
+    border-radius: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.content-wide .text-box-bottom h3 {
+    padding-bottom: 1em;
+}
+
+/* sec-03 VRM　*/
+.sec-03 .text-box {
+    max-width: 500px;
+    transform: translate(-20px, 50px);
+}
+
+.content-wide .text-box-bottom02 {
+    font-size: 18px;
+    z-index: 20;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 40px;
+    max-width: 950px;
+    transform: translate(40px, -10px);
+    backdrop-filter: blur(10px);
+    border-radius: 5px;
+    border-radius: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.content-wide .text-box-bottom02 h3 {
+    padding-bottom: 1em;
+}
+
+/* video設定 */
+video {
+    width: 600px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 5px;
+    z-index: 10;
+}
+
+.hideAnchor {
+	display:block;
+	height:1px;
+	overflow:hidden;
+	text-indent:-9999px;
+	margin-top:-10px;
+	padding-bottom:10px;
+}

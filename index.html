@@ -3,48 +3,170 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <!-- A-FrameをCDNから読込む　-->
-    <script src="https://aframe.io/releases/1.6.0/aframe.min.js"></script>
-    <!-- アニメーションミキサー　-->
-    <script src="https://cdn.jsdelivr.net/npm/aframe-extras@7.0.0/dist/aframe-extras.min.js"></script>
-    <!-- オービットコントローラー -->
-    <script src="https://cdn.jsdelivr.net/npm/aframe-orbit-controls@1.3.2/dist/aframe-orbit-controls.min.js"></script>
-    
-    
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <a-scene>
-        <!-- aframe-orbit-controlsのプロパティを記述 -->
-        <a-entity camera look-controls="enabled: false"
-        orbit-controls=
-        "target: 0 25 0; 
-        maxPolarAngle:90; 
-        minDistance: 2; 
-        maxDistance: 1000; 
-        initialPosition: 0 20 20; 
-        enableZoom: true;
-        maxAzimuthAngle: 90;
-        zoomSpeed: 2;
-        rotateSpeed: 1.5">
-        </a-entity>
-        
-        <a-assets>
-            <!-- 3Dモデルの読み込み -->
-            <a-gltf-model id="humanModel" src="reimei02_greeting.glb">
-            </a-gltf-model>
-        </a-assets>
+    <div class="header">
+        <div class="headerTitle">
+            <h1>Portfolio</h1>
+            <p>Hattori Tomonori</p>
+        </div>
 
+        <nav>
+            <ul>
+                <li>
+                    <a href="#about">ABOUT</a>
+                </li>
+                <li>
+                    <a href="#works">WORKS</a>
+                </li>
+                <li>
+                    <a href="#vrm">3D VIEWER</a>
+                </li>
+                <li>
+                    <a href="#movie">MOTIONS</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="main">
+        <div class="title">
+            <img src="img/title_01.png" alt="title_01" width="100%">
+            <h2>下にスクロールしていくとコンテンツが表示されます</h2>
+        </div>
         
+        
+        <div class="hideAnchor"><a name="about"></a></div>
+
+        <section class="sec-01">
+            <div class="container">
+                <h2 class="sec-title">このウェブサイトについて</h2>
+                <div class="content">
+                    <div class="text-box">
+                        <h3>3Dモデルポートフォリオ</h3>
+                        <p>このウェブサイトは私が作成した３Dモデルを動画やビューワーで確認してもらおうと思い作成しました。<br>
+                        右の画像は集英社ジャンプ＋にて連載中のジャンケットバンクという漫画に出てくる「叶黎明」というキャラクターの3Ｄを作成しました。<br>
+                        <br>
+                        ※当ウェブサイト内のコンテンツについて、無許可での転用や使用は一切禁止とさせて頂きます。</p>
+                    </div>
+                    <div class="image">
+                        <img src="img/standing_01.jpg" alt="Reimei">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="hideAnchor"><a name="works"></a></div>
+
+        <section class="sec-02">
+            <div class="container">
+                <h3 class="sec-title">キャラクターモデリング</h3>
+                
+
+                <div class="content">
+                    <div class="image">
+                        <img src="img/Expressions.jpg" alt="Reimei">
+                    </div>
+                    <div class="text-box">
+                        <h3>モデリング例</h3>
+                        <p>このモデルはポートフォリオ用に仕事の合間で制作したものです。<br>
+                        VRMを最終フォーマットとしている為、PBRマテリアルなしでも立体感がしっかりと伝わるように陰影を工夫しています。</p>
+                        <br>
+                        <p>使用ソフト : Blender/SubstancePainter<br>
+                        制作期間 : 約１ヶ月</p>
+                    </div>
+                </div>
+
+                <div class="content-wide">
+                    <div class="image-wide">
+                        <img src="img/other_items.jpg" alt="Reimei">
+                    </div>
+                    <div class="text-box-bottom">
+                        <h3>キャラクターの魅力を引き出す</h3>
+                        <p>フィギュアの原型師をしていた経験から多くの版権が関わるキャラクターモデリングに携わってきました。<br>
+                        2Dのイラストから立体映えのするアレンジを加えながら、そのキャラクターらしさと魅力を引き出します。<br>
+                        画像内左上のケンシロウはVRゲームの企画に参加した際に担当したゲーム用の３Dモデルです。</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <div class="hideAnchor"><a name="vrm"></a></div>
+
+        <section class="sec-03">
+            <div class="container">
+                <h3 class="sec-title">3Dモデルビューワー</h3>
+
+                <iframe class="viewer" src="model_viewer.html" width="800px" height="600px"></iframe>
+
+                <div class="content-wide">
+                    
+                    <div class="text-box-bottom02">
+                        <h3>ウェブビューワー</h3>
+                        <p>サンプルデモの為にA-Frameを使用して作成した3Dモデルビューワーです。<br>
+                        マウスの左ドラッグ : 回転<br>
+                        マウスホイール : ズーム<br>
+                        <a href="model_viewer.html">ビューワーだけを表示</a></p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <div class="hideAnchor"><a name="movie"></a></div>
+        
+        <section class="sec-03">
+            <div class="container">
+                <h3 class="sec-title">モーションサンプル動画</h3>
+
+                <div class="content">
+                    <div class="video">
+                        <video autoplay muted loop playsinline width="600px">
+                            <source src="video/0001-0200.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="text-box">
+                        <h3>モーション</h3>
+                        <p>Blenderでモデリングし、VRMモデル向けにUnityのHumanoid規定に合わせてボーンを作成しています。<br>
+                        動画はmixamoからインストールしたアニメーションを使用して動かしています。</p>
+                    </div>
+                </div>
 
 
-        <!--アニメーションを使用する-->
-        <a-entity gltf-model="#humanModel" position="0 0 0" scale="15 15 15" animation-mixer="loop: once; clampWhenFinished: true"></a-entity>
+                <div class="content">
+                    <div class="video">
+                        <video autoplay muted loop playsinline width="600px">
+                            <source src="video/KalidoFaceTEST.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="text-box">
+                        <h3>トラッキング</h3>
+                        <p>KalidoFaceというウェブサイトでの動作確認をした様子です。<br>
+                        このサイトではコライダーの設定が反映されませんが、胸元の紐には揺れモノの設定をしてあります。</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
         
-        <!--オービットコントローラー
-        <a-entity camera look-controls="enabled: false" orbit-controls="target: 0 2 0; minDistance: 1.5; maxDistance: 10; initialPosition: 0 0 0; rotateSpeed: 0.5"></a-entity>-->
-        
-    </a-scene>
-    </a-scene>
+    </div>
+    
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script>
+        ScrollReveal({ reset: true, distance: "60px", duration: 2000, delay: 200 });
+        ScrollReveal().reveal('.title', { duration: 3000, origin: "top" });
+        ScrollReveal().reveal('.sec-title', { delay: 100, origin: "left" });
+        ScrollReveal().reveal('.sec-01 .image', { delay: 600, origin: "bottom" });
+        ScrollReveal().reveal('.sec-01 .text-box', { delay: 200, origin: "left" });
+        ScrollReveal().reveal('.sec-02 .image', { delay: 600, origin: "bottom" });
+        ScrollReveal().reveal('.sec-02 .text-box', { delay: 200, origin: "right" });
+        ScrollReveal().reveal('.sec-02 .image-wide', { delay: 600, origin: "top" });
+        ScrollReveal().reveal('.sec-02 .text-box-bottom', { delay: 100, origin: "bottom" });
+        ScrollReveal().reveal('.sec-03 .text-box', { delay: 200, origin: "right" });
+        ScrollReveal().reveal('.sec-03 .text-box-bottom02', { delay: 100, origin: "bottom" });
+    </script>
 </body>
 </html>
