@@ -1,0 +1,68 @@
+
+.topRight {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    z-index: 10;
+    background: rgba(255, 255, 255, 0.377);
+    padding: 10px;
+    width: 250px;
+    border-radius: 5px;
+    border-radius: 1px solid;
+    color: white;
+}
+
+.topRight h3 {
+margin: 0 0 6px 0;
+}
+
+.topRight input {
+width: 20px;
+margin: 3 3 3 0;
+}
+
+.topRight #loop {
+width: 100%;
+}
+
+.topRight #duration {
+width: 100%;
+margin: 0;
+}
+
+.topRight label {
+width: 250px;
+}
+
+label:nth-child(1), 
+label:nth-child(5), 
+label:nth-child(9) {
+background: rgba(49, 49, 49, 0.171);
+}
+
+.tips {
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    z-index: 10;
+    background: rgba(53, 53, 53, 0.486);
+    padding: 10px;
+    width: 300px;
+    border-radius: 5px;
+    border-radius: 1px solid;
+    backdrop-filter: blur(10px);
+}
+
+.tips .textbox {
+    margin: 0 auto;
+    width: 200px;
+    color: white;
+}
+
+.tips .textbox h2 {
+    font-size: 20px;
+}
+
+.tips .textbox p {
+    font-size: 18px;
+}
