@@ -29,11 +29,13 @@ body {
 .headerTitle h1 {
     color: white;
     margin: 0px;
+    font-size: 34px;
 }
 
 .headerTitle p {
     color: white;
     margin: 0px;
+    font-size: 18px;
 }
 
 .header nav ul li {
@@ -207,8 +209,8 @@ section {
     z-index: 20;
     background: rgba(255, 255, 255, 0.1);
     padding: 40px;
-    max-width: 950px;
-    transform: translate(40px, -10px);
+    width: 950px;
+    transform: translate(50px, -10px);
     backdrop-filter: blur(10px);
     border-radius: 5px;
     border-radius: 1px solid rgba(255, 255, 255, 0.1);
@@ -234,4 +236,8 @@ video {
 	text-indent:-9999px;
 	margin-top:-10px;
 	padding-bottom:10px;
+}
+
+iframe {
+    border: 0;
 }
