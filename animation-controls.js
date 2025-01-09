@@ -1,7 +1,7 @@
 
 const animationNames = {
     idle: 'Greeting',
-    run: 'HappyWalking',
+    run: 'SwaggerWalk',
     walk: 'Dancing',
   };
   

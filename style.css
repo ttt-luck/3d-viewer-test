@@ -152,10 +152,13 @@ section {
 }
 
 /* sec-02 WORKのリンク先　*/
+.sec-02 .content {
+    margin-bottom: 10px;
+}
 
 .sec-02 .text-box {
     max-width: 400px;
-    transform: translate(-20px, 50px);
+    transform: translate(-20px, 20px);
 }
 
 .content-wide {
@@ -168,7 +171,7 @@ section {
 .content-wide .image-wide {
     position: relative;
     width: 1050px;
-    height: 600px;
+    height: 267px;
     overflow: hidden;
 }
 
